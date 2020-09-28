@@ -42,6 +42,18 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav
+const newLink = document.createElement("a")
+newLink.textContent = "Blog"
+newLink.href = "#"
+newLink.id = "BlogLink"
+document.querySelector("nav").appendChild(newLink)
+
+const newLinkT = document.createElement("a")
+newLinkT.textContent = "Team"
+newLinkT.href = "#"
+newLinkT.id = "Team"
+document.querySelector("nav").appendChild(newLinkT)
+
 const navItems = document.querySelectorAll("nav > a");
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
 navItems[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -49,6 +61,8 @@ navItems[2].textContent = siteContent["nav"]["nav-item-3"];
 navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+navItems.forEach(item => item.style.color = "green");
 
 //cta
 let ctaHeading = document.querySelector("h1");
